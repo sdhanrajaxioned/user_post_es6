@@ -15,8 +15,15 @@ postContainer.appendChild(postList);
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  setTimeout(displayPosts, 100);
-  setTimeout(displayPhotos, 150);
+  if(userInput.value == '') {
+    errorMsg.classList.add('active');
+    errorMsg.innerText = '**This field is required!**';
+    return false;
+  } else { 
+    errorMsg.innerText = '';   
+    setTimeout(displayPosts, 100);
+    setTimeout(displayPhotos, 150);
+  }
 });
 
 //function which returns nth fibonnaci number
@@ -59,7 +66,7 @@ const displayPosts = () => {
     const li = document.createElement('li');
     li.setAttribute('data-id', post.id)
     li.innerHTML += `
-    <h1 class="post-title">${post.title}</h1>
+    <h1 class="post-title">${post.id}: ${post.title}</h1>
     <p class="post-desc">${post.body}</p>
     <div class="photo-container"><div>`
     postList.appendChild(li);
@@ -76,16 +83,16 @@ const displayPhotos = () => {
     //check if the number is even
     if(id % 2 == 0) {
       photoContainer.innerHTML += `
-      <img src="${randomImage(photos)}" alt="Placeholder img">
-      <img src="${randomImage(photos)}" alt="Placeholder img">
-      <img src="${randomImage(photos)}" alt="Placeholder img">
+      <figure class="post-figure"><img src="${randomImage(photos)}" alt="Placeholder img"></figure>
+      <figure class="post-figure"><img src="${randomImage(photos)}" alt="Placeholder img"></figure>
+      <figure class="post-figure"><img src="${randomImage(photos)}" alt="Placeholder img"></figure>
       `
     }
     // if the number is odd
     else {
       photoContainer.innerHTML += `
-      <img src="${randomImage(photos)}" alt="Placeholder img">
-      <img src="${randomImage(photos)}" alt="Placeholder img">
+      <figure class="post-figure"><img src="${randomImage(photos)}" alt="Placeholder img"></figure>
+      <figure class="post-figure"><img src="${randomImage(photos)}" alt="Placeholder img"></figure>
       `
     }
   })

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -82,7 +83,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a { 
@@ -108,52 +109,72 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
 
 /*=================================
   main styling starts here
 =================================*/
+.post-form {  
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.error-msg {
+  display: inline-block;
+  text-indent: -9999px;
+}
 
+.formgroup {
+  width: 300px;
+}
 
+.post-number {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: aqua;
+}
 
+.post-number:focus { outline: none;}
 
+::placeholder {
+  color: #000;
+}
 
+.submit-btn {
+  padding: 10px 45px;
+  border: none;
+  border-radius: 50px;
+  background-color:chartreuse;
+}
 
+.submit-btn:hover { 
+  background-color:darkkhaki;
+  transition: .4s ease-in;
+}
 
+.post-title {
+  font-size: 24px;
+  padding: 10px 0 5px;
+}
+
+.post-desc {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.photo-container { 
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.photo-container figure {
+  flex: 1;
+}
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  

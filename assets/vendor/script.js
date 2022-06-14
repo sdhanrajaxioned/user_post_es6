@@ -16,7 +16,8 @@ postContainer.appendChild(postList);
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if(userInput.value == '') {
-    errorMsg.innerText = '**This field is required!**'
+    errorMsg.classList.add('active');
+    errorMsg.innerText = '**This field is required!**';
     return false;
   } else { 
     errorMsg.innerText = '';   

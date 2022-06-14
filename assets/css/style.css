@@ -123,13 +123,19 @@ li {
 }
 
 .error-msg {
+  padding: 5px 0 15px;
   display: inline-block;
+  color: #ff0000;
+  font-size: 16px;
   text-indent: -9999px;
 }
 
-.formgroup {
-  width: 300px;
-}
+.error-msg.active { text-indent: 0; }
+.formgroup { width: 300px; }
+.photo-container { display: flex; }
+.photo-container figure { flex: 1; }
+.post-number:focus { outline: none;}
+::placeholder { color: #000; }
 
 .post-number {
   width: 100%;
@@ -139,11 +145,6 @@ li {
   background-color: aqua;
 }
 
-.post-number:focus { outline: none;}
-
-::placeholder {
-  color: #000;
-}
 
 .submit-btn {
   padding: 10px 45px;
@@ -158,23 +159,15 @@ li {
 }
 
 .post-title {
-  font-size: 24px;
   padding: 10px 0 5px;
+  font-size: 24px;
 }
 
 .post-desc {
-  font-size: 18px;
   padding-bottom: 15px;
+  font-size: 18px;
 }
 
-.photo-container { 
-  display: flex;
-  /* flex-wrap: wrap; */
-}
-
-.photo-container figure {
-  flex: 1;
-}
 /*=================================
   main styling ends here
 =================================*/

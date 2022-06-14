@@ -132,10 +132,14 @@ li {
 
 .error-msg.active { text-indent: 0; }
 .formgroup { width: 300px; }
-.photo-container { display: flex; }
 .photo-container figure { flex: 1; }
 .post-number:focus { outline: none;}
 ::placeholder { color: #000; }
+
+.photo-container { 
+  display: flex; 
+  gap: 10px;
+}
 
 .post-number {
   width: 100%;
